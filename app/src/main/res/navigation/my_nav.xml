@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/listofdata">
+
+    <fragment
+        android:id="@+id/listofdata"
+        android:name="com.example.room.listofdata"
+        android:label="LIST"
+        tools:layout="@layout/fragment_listofdata" >
+        <action
+            android:id="@+id/action_listofdata_to_ADDDATA"
+            app:destination="@id/ADDDATA" />
+    </fragment>
+    <fragment
+        android:id="@+id/ADDDATA"
+        android:name="com.example.room.ADDDATA"
+        android:label="ADD"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_ADDDATA_to_listofdata"
+            app:destination="@id/listofdata" />
+    </fragment>
+</navigation>
